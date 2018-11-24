@@ -5,8 +5,8 @@ class GirlImage extends Component {
   render() {
     const comments = this.props.img.comment
       ? this.props.img.comment.map(comment => (
-          <p>
-            <span class="font-weight-bold">{comment.createdBy.username}</span>:{" "}
+          <p key={comment._id}>
+            <span className="font-weight-bold">{comment.createdBy.username}</span>:{" "}
             {comment.content}
           </p>
         ))
